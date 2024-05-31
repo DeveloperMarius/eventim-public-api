@@ -33,8 +33,12 @@ To search for products, you can use the `search` method. This method accepts an 
 ```php
 use developermarius\eventim\publicapi\models\EventimSearchQuery;
 
-$query = new EventimSearchQuery();
-$query->setKeyword('Comedy in Frankfurt am Main');
+$query = EventimSearchQuery::new()->categories(array(
+    EventimCategoryType::HUMOR,
+    EventimCategoryType::CONCERT
+))->cityNames(array(
+    'Frankfurt am Main'
+));
 
 $response = $client->search($query);
 ```
