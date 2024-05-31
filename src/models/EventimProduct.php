@@ -112,6 +112,7 @@ class EventimProduct extends DataClass{
          * Diamond VIP Package - Nick Cave & The Bad Seeds - The Wild God Tour
          * Emerald VIP Package - Nick Cave & The Bad Seeds - The Wild God Tour
          * Harry Potter™ - Die Ausstellung | VIP-Ticket
+         * INSANO VIP Package
          */
         preg_match('/[a-zA-Z0-9]+ VIP/', $this->getName(), $matches1);
         preg_match('/[a-zA-Z0-9]+ Tickets/', $this->getName(), $matches2);
@@ -128,7 +129,8 @@ class EventimProduct extends DataClass{
             str_starts_with($this->getName(), 'Manifest Ticket') ||
             str_starts_with($this->getName(), 'Early Entry Package') ||
             str_starts_with($this->getName(), 'Fan Upgrade') ||
-            str_starts_with($this->getName(), 'VIP-Ticket') ||
+            str_ends_with($this->getName(), 'VIP-Ticket') ||
+            str_ends_with($this->getName(), 'VIP Package') ||
             sizeof($matches1) > 0 ||
             sizeof($matches2) > 0
         );
