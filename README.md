@@ -4,6 +4,8 @@ This is a simple wrapper for the Eventim Public Api. It is written in PHP and pr
 The Eventim Public Api is a RESTful API that provides access to the Eventim products through its search functionality.  
 After I did some simple analysis on the Eventim Public Api, I documented some components of the API in a gist. You can find the gist [here](https://gist.github.com/DeveloperMarius/7e8aff4c69ccbf59238d76163c86d9c9).
 
+> **Disclaimer** before using this client: please ensure that you have the permissions from the Website Owner.
+
 ## Installation
 
 To install this library, you need to have Composer installed on your system. If you don't have it installed, you can download it from [here](https://getcomposer.org/).
